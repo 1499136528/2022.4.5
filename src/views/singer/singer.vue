@@ -1,18 +1,12 @@
 // 歌手
 <template>
-    <div>
-        歌手
-    </div>
+  <div>歌手</div>
 </template>
 
 <script>
-    export default ({
-        name: "singer",
-        methods: {
-            
-        }
-    })
+export default {
+  name: "singer",
+  methods: {},
+};
 </script>
-<style scoped>
-
-</style>
+<style scoped></style>

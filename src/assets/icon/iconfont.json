@@ -1,0 +1,86 @@
+{
+  "id": "3310828",
+  "name": "QQ音乐",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "17542123",
+      "name": "播放",
+      "font_class": "bofang1",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "1033985",
+      "name": "苹果",
+      "font_class": "iconfontapple",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "3204798",
+      "name": "全民K歌",
+      "font_class": "quanminKge",
+      "unicode": "e69d",
+      "unicode_decimal": 59037
+    },
+    {
+      "icon_id": "3638697",
+      "name": "全民k歌",
+      "font_class": "quanminkge",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "6874516",
+      "name": "向右三角形",
+      "font_class": "xiangyousanjiaoxing",
+      "unicode": "e70f",
+      "unicode_decimal": 59151
+    },
+    {
+      "icon_id": "7169667",
+      "name": "PC端入口",
+      "font_class": "PCduanrukou",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "9038617",
+      "name": "安卓",
+      "font_class": "anzhuo",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "11116860",
+      "name": "直播",
+      "font_class": "zhibo",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "19376046",
+      "name": "设备_苹果_电脑",
+      "font_class": "shebei_pingguo_diannao",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "26673846",
+      "name": "播放器_play-two",
+      "font_class": "bofangqi_play-two",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "27760516",
+      "name": "音效",
+      "font_class": "yinxiao",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    }
+  ]
+}

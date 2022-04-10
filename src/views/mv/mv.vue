@@ -1,18 +1,12 @@
 // MV
 <template>
-    <div>
-        MV
-    </div>
+  <div>MV</div>
 </template>
 
 <script>
-    export default ({
-        name: "mv",
-        methods: {
-            
-        }
-    })
+export default {
+  name: "mv",
+  methods: {},
+};
 </script>
-<style scoped>
-
-</style>
+<style scoped></style>

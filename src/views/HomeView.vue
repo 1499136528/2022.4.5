@@ -241,7 +241,10 @@ export default {
 .header,
 .container,
 .footer {
+<<<<<<< HEAD
   padding: 0 8%;
+=======
+>>>>>>> 846f4ae82e1f9e7822500e2077575bb82e1254f3
   box-sizing: border-box;
   width: 100%;
 }
@@ -312,6 +315,10 @@ export default {
 .container {
   /* height: 100vh; */
   padding-bottom: 20vh;
+<<<<<<< HEAD
+=======
+  box-sizing: border-box;
+>>>>>>> 846f4ae82e1f9e7822500e2077575bb82e1254f3
 }
 
 /* 底部区域 */

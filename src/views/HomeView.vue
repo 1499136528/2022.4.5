@@ -54,7 +54,6 @@ export default {
 .header,
 .container,
 .footer {
-  padding: 0 12%;
   box-sizing: border-box;
   width: 100%;
 }
@@ -83,7 +82,9 @@ export default {
 
 /* 内容区域 */
 .container {
-  height: 100vh;
+  /* height: 100vh; */
+  padding-bottom: 20vh;
+  box-sizing: border-box;
 }
 
 /* 底部区域 */

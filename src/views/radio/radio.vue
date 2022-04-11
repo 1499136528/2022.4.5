@@ -1,17 +1,5 @@
 // 电台
 <template>
-<<<<<<< HEAD
-  <div>电台</div>
-</template>
-
-<script>
-export default {
-  name: "radio",
-  methods: {},
-};
-</script>
-<style scoped></style>
-=======
     <div class="main">
         <div class="category">
             <ul class="left">
@@ -182,4 +170,3 @@ export default {
         margin-top:15px;
     }
 </style>
->>>>>>> lym

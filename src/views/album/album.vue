@@ -1,17 +1,5 @@
 // 数字专辑
 <template>
-<<<<<<< HEAD
-  <div>数字专辑</div>
-</template>
-
-<script>
-export default {
-  name: "album",
-  methods: {},
-};
-</script>
-<style scoped></style>
-=======
   <div class="main">
     <!-- 数字专辑 -->
     <div class="swiper">
@@ -113,4 +101,3 @@ export default {
         margin-top:28px; 
     }
 </style>
->>>>>>> lym

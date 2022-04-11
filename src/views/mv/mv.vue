@@ -1,17 +1,5 @@
 // MV
 <template>
-<<<<<<< HEAD
-  <div>MV</div>
-</template>
-
-<script>
-export default {
-  name: "mv",
-  methods: {},
-};
-</script>
-<style scoped></style>
-=======
     <div class="main">
         <div class="navbtn">
             <div class="top navs">
@@ -279,4 +267,3 @@ import instance from '@/api/index'
         top:50%;
     } */
 </style>
->>>>>>> lym

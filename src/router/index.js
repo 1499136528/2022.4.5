@@ -52,6 +52,7 @@ const routes = [
         component: () => import("../views/ticket/ticket.vue"),
       },
     ],
+<<<<<<< HEAD
     children: [
       {
         path: "/",
@@ -74,6 +75,18 @@ const routes = [
         name: "list",
         component: () => import("../views/list/list.vue"),
         children: [
+=======
+    children:[
+      {path:"/",name:"homes",component:()=>import("../views/home/home.vue")},
+      {path:"/singer",name:"singer",component:()=>import("../views/singer/singer.vue")},
+      {path:"/disc",name:"disc",component:()=>import("../views/disc/disc.vue")},
+      {
+        path:"list",
+        redirect:{name:"biaosheng"},
+        name:"list",
+        component:()=>import("../views/list/list.vue"),
+        children:[
+>>>>>>> 5738124a77fd182356ec6ac030b12b8226a6b424
           {
             path: "biaosheng",
             name: "biaosheng",
@@ -105,6 +118,7 @@ const routes = [
             component: () => import("../views/list/tenxun/tenxun.vue"),
           },
           {
+<<<<<<< HEAD
             path: "shiqu",
             name: "shiqu",
             component: () => import("../views/list/shiqu/shiqu.vue"),
@@ -137,6 +151,20 @@ const routes = [
         component: () => import("../views/ticket/ticket.vue"),
       },
     ],
+=======
+            path:"shiqu",
+            name:"shiqu",
+            component:()=>import("../views/list/shiqu/shiqu.vue")
+          }
+        ]
+    },
+      {path:"/classify",name:"classify",component:()=>import("../views/classify/classify.vue")},
+      {path:"/radio",name:"radio",component:()=>import("../views/radio/radio.vue")},
+      {path:"/mv",name:"mv",component:()=>import("../views/mv/mv.vue")},
+      {path:"/album",name:"album",component:()=>import("../views/album/album.vue")},
+      {path:"/ticket",name:"ticket",component:()=>import("../views/ticket/ticket.vue")},
+    ]
+>>>>>>> 5738124a77fd182356ec6ac030b12b8226a6b424
   },
 ];
 

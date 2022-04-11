@@ -1,5 +1,6 @@
 // 排行榜单
 <template>
+<<<<<<< HEAD
   <div class="all">
     <div class="list">
       <div class="list-first">
@@ -50,6 +51,36 @@
   </div>
 </template>
 
+=======
+    <div class="all">
+        <div class="list">
+            <div class="list-first">
+                <h3>巅峰榜</h3>
+                <ul class="list-ul">
+                    <li><router-link to="/list/biaosheng" active-class="green">飙升榜</router-link></li>
+                    <li><router-link to="/list/rege" active-class="green">热歌榜</router-link></li>
+                    <li><router-link to="/list/xinge" active-class="green">新歌榜</router-link></li>
+                    <li><router-link to="/list/zhishu" active-class="green">流行指数榜</router-link></li>
+                    <li><router-link to="/list/dianyin" active-class="green">喜力电音榜</router-link></li>
+                    <li><router-link to="/list/tenxun" active-class="green">腾讯音乐人原创榜</router-link></li>
+                    <li><router-link to="/list/shiqu" active-class="green">听歌识曲榜</router-link></li>
+                    <li>MV榜</li>
+                </ul>
+            </div> 
+        </div>
+        <div class="vie">
+                <router-view/>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+  name: "list",
+  methods: {},
+};
+</script>
+>>>>>>> 5738124a77fd182356ec6ac030b12b8226a6b424
 <style scoped>
 .all {
   display: flex;

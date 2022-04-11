@@ -334,6 +334,10 @@ export default {
   padding-bottom: 20vh;
   box-sizing: border-box;
 }
+/* .container {
+  height: 100vh;
+} */
+
 
 /* 底部区域 */
 .footer {

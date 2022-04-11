@@ -1,16 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <div>分类歌单</div>
-</template>
-
-<script>
-export default {
-  name: "classify",
-  methods: {},
-};
-</script>
-<style scoped></style>
-=======
   <div class="block">
     <el-carousel trigger="click" height="200px" :autoplay="false">
       <el-carousel-item v-for="(item, index) in arrs" :key="index">
@@ -131,4 +119,3 @@ h3 {
     color: #ccccca;
 }
 </style>
->>>>>>> 846f4ae82e1f9e7822500e2077575bb82e1254f3

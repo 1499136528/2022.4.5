@@ -29,10 +29,7 @@
         </div>
         <div class="selet">
           <div class="select">
-            <el-menu
-              class="el-menu-demo"
-              mode="horizontal"
-            >
+            <el-menu class="el-menu-demo" mode="horizontal">
               <el-submenu index="1">
                 <template slot="title">开通VIP</template>
                 <el-menu-item index="1-1">开通绿钻豪华版</el-menu-item>
@@ -48,7 +45,13 @@
         </div>
       </div>
       <div class="router_nav" @click="routerNav">
-        <div v-for="(item, index) in nav" :class="act === index ? 'active':''" :key="index" @click="getIndex(index)" :path="item.path">
+        <div
+          v-for="(item, index) in nav"
+          :class="act === index ? 'active' : ''"
+          :key="index"
+          @click="getIndex(index)"
+          :path="item.path"
+        >
           {{ item.title }}
         </div>
       </div>
@@ -141,28 +144,44 @@
         </div>
         <div>
           <h3>TME集团官网</h3>
-          <ul><li>腾讯音乐</li></ul>
+          <ul>
+            <li>腾讯音乐</li>
+          </ul>
         </div>
       </div>
       <div class="footer_botm">
         <ul>
-          <li>关于腾讯</li>|
-          <li>About Tencent</li>|
-          <li>服务条款</li>|
-          <li>用户服务协议</li>|
-          <li>隐私政策</li>|
-          <li>权力声明</li>|
-          <li>广告服务</li>|
-          <li>腾讯招聘</li>|
-          <li>客服中心</li>|
+          <li>关于腾讯</li>
+          |
+          <li>About Tencent</li>
+          |
+          <li>服务条款</li>
+          |
+          <li>用户服务协议</li>
+          |
+          <li>隐私政策</li>
+          |
+          <li>权力声明</li>
+          |
+          <li>广告服务</li>
+          |
+          <li>腾讯招聘</li>
+          |
+          <li>客服中心</li>
+          |
           <li>网站导航</li>
         </ul>
-        <p>Copyright © 1998 - 2022 Tencent. <span>All Rights Reserved.</span></p>
+        <p>
+          Copyright © 1998 - 2022 Tencent. <span>All Rights Reserved.</span>
+        </p>
         <ul>
-          腾讯公司 
-          <li>版权所有</li>|
-          <li>营业执照</li>| 网络文化经营许可证
-          <li>粤网文[2020]3396-195号</li>|客服电话
+          腾讯公司
+          <li>版权所有</li>
+          |
+          <li>营业执照</li>
+          | 网络文化经营许可证
+          <li>粤网文[2020]3396-195号</li>
+          |客服电话
           <li>4006016666</li>
         </ul>
       </div>
@@ -184,10 +203,10 @@ export default {
         { title: "电台", path: "/radio" },
         { title: "MV", path: "/mv" },
         { title: "数字专辑", path: "/album" },
-        { title: "票务", path: "/ticket" }
+        { title: "票务", path: "/ticket" },
       ],
       state1: "",
-      act:0
+      act: 0,
     };
   },
   components: {},
@@ -195,7 +214,7 @@ export default {
     this.restaurants = this.loadAll();
   },
   methods: {
-    getIndex(index){
+    getIndex(index) {
       this.act = index;
     },
     routerNav(e) {
@@ -241,12 +260,10 @@ export default {
 .header,
 .container,
 .footer {
-<<<<<<< HEAD
   padding: 0 8%;
-=======
->>>>>>> 846f4ae82e1f9e7822500e2077575bb82e1254f3
   box-sizing: border-box;
   width: 100%;
+  overflow: hidden;
 }
 
 /* 头部区域 */
@@ -315,10 +332,7 @@ export default {
 .container {
   /* height: 100vh; */
   padding-bottom: 20vh;
-<<<<<<< HEAD
-=======
   box-sizing: border-box;
->>>>>>> 846f4ae82e1f9e7822500e2077575bb82e1254f3
 }
 
 /* 底部区域 */
@@ -342,19 +356,20 @@ export default {
 .footer_top dt {
   margin: 80px 0 30px;
 }
-.footer_top dl+dl{
+.footer_top dl + dl {
   margin-left: 90px;
 }
-.footer_top dd{
+.footer_top dd {
   display: flex;
   margin-left: -24px;
 }
-.footer_top dd>div{
+.footer_top dd > div {
   padding: 0 24px;
   font-size: 14px;
   text-align: center;
 }
-.footer_top .iconfont+p,.footer_top .iconfont+div{
+.footer_top .iconfont + p,
+.footer_top .iconfont + div {
   margin-top: 10px;
   margin-left: -10px;
   width: 150%;
@@ -363,29 +378,32 @@ export default {
 .footer_top div div {
   margin-top: 10px;
 }
-.footer_top ul{
+.footer_top ul {
   display: flex;
   flex-wrap: wrap;
   margin-left: 24px;
 }
-.footer_top ul li{
+.footer_top ul li {
   width: 100px;
   margin-bottom: 12px;
   font-size: 13px;
 }
-.footer_top dd div:hover,.footer_top dd li:hover,.footer_cen h3:hover,.footer_cen li:hover{
+.footer_top dd div:hover,
+.footer_top dd li:hover,
+.footer_cen h3:hover,
+.footer_cen li:hover {
   cursor: pointer;
   color: #31c27c;
 }
 
-.footer_cen{
+.footer_cen {
   display: flex;
 }
-.footer_cen div{
+.footer_cen div {
   width: 300px;
   margin-right: 200px;
 }
-.footer_cen h3{
+.footer_cen h3 {
   font-weight: normal;
   margin: 100px 0 40px;
 }
@@ -394,26 +412,27 @@ export default {
   display: block;
   clear: both;
 }
-.footer_cen div ul li{
+.footer_cen div ul li {
   float: left;
   margin-right: 20px;
 }
-.footer_botm{
+.footer_botm {
   text-align: center;
   font-size: 12px;
   width: 100%;
   padding: 60px 0 30px;
 }
-.footer_botm ul{
+.footer_botm ul {
   display: flex;
   width: auto;
   justify-content: center;
   align-items: center;
 }
-.footer_botm ul li{
+.footer_botm ul li {
   padding: 6px;
 }
-.footer_botm ul li:hover,.footer_botm span:hover{
+.footer_botm ul li:hover,
+.footer_botm span:hover {
   color: #31c27c;
   cursor: pointer;
 }

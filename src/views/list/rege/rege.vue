@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import instance from "@/api/index"
+import instance from "@/api/index";
 export default {
   name: "rege.vue",
   data() {
@@ -63,78 +63,78 @@ export default {
 </script>
 
 <style scoped>
-    .top{
-        display: flex;
-        align-items: center;
-    }
-    .top h3{
-        font-size: 30px;
-        color: #2d1e0b;
-        margin-right: 18px;
-    }
-    .top .time{
-        margin-right: 18px;
-        color: #919296;
-    }
-    .btns{
-        margin-top: 42px;
-    }
-    .btns button{
-        background: #fff;
-        border: 1px solid #dcdcdc;
-        padding: 14px 31px;
-        margin-right: 10px;
-        cursor: pointer;
-        font-size: 14px;
-    }
-    .bottom{
-        width: 1360px;
-        /* height: 100vh; */
-        background: #fcfcfc;
-        overflow: hidden;
-        margin-top:20px ;
-    }
-    .bottom-list{
-        display: flex;
-        margin-left: 165px;
-        margin-top: 24px;
-        margin-bottom: 36px;
-    }
-    .bottom-list li:nth-child(1){
-        margin-right: 753px;
-    }
-    .bottom-list li:nth-child(2){
-        margin-right: 248px;
-    }
-    .bottom-list1 li{
-        display: flex;
-        align-items: center;
-        width: 100%;
-        margin-bottom: 10px;
-    }
-    .basis-left{
-        display: flex;
-        align-items: center;
-        width: 70%;
-    }
-    .basis-right{
-        display: flex;
-        align-items: center;
-        width: 30%;
-    }
-    .basis-right .name{
-        width: 69%;
-    }
-    .image{
-        width: 80px;
-        height: 80px;
-        margin-left: 15px;
-        margin-right: 10px;
-    }
-    .num{
-        width: 5%;
-    }
-    .shangsheng{
-        width: 9%;
-    }
+.top {
+  display: flex;
+  align-items: center;
+}
+.top h3 {
+  font-size: 30px;
+  color: #2d1e0b;
+  margin-right: 18px;
+}
+.top .time {
+  margin-right: 18px;
+  color: #919296;
+}
+.btns {
+  margin-top: 42px;
+}
+.btns button {
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  padding: 14px 31px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.bottom {
+  width: 1360px;
+  /* height: 100vh; */
+  background: #fcfcfc;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.bottom-list {
+  display: flex;
+  margin-left: 165px;
+  margin-top: 24px;
+  margin-bottom: 36px;
+}
+.bottom-list li:nth-child(1) {
+  margin-right: 753px;
+}
+.bottom-list li:nth-child(2) {
+  margin-right: 248px;
+}
+.bottom-list1 li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.basis-left {
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+.basis-right {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+.basis-right .name {
+  width: 69%;
+}
+.image {
+  width: 80px;
+  height: 80px;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+.num {
+  width: 5%;
+}
+.shangsheng {
+  width: 9%;
+}
 </style>

@@ -52,7 +52,7 @@
       </div>
     </div>
     <div class="home_2">
-      <div class="block">
+      <!-- <div class="block">
         <h1>新 歌 首 发</h1>
         <ul @click="gedan">
           <li
@@ -99,7 +99,7 @@
             </el-carousel-item>
           </el-carousel>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -129,7 +129,7 @@ export default {
       gdtjDate: null,
       myindex: 0,
       xgsfDate: null,
-      myindex1: 0
+      myindex1: 0,
     };
   },
   methods: {
@@ -173,6 +173,9 @@ export default {
 };
 </script>
 <style scoped>
+.items[data-v-39f87be5]{
+  justify-content: center;
+}
 .actives {
   color: #31c27c;
 }
@@ -184,7 +187,9 @@ h1 {
 }
 .home_1,
 .home_2 {
+  width: 100vw;
   position: relative;
+  left: -8%;
 }
 .block ul {
   display: flex;

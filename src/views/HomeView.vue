@@ -309,11 +309,17 @@ export default {
 }
 
 /* 内容区域 */
+<<<<<<< HEAD
 .container {
   /* height: 100vh; */
   padding-bottom: 20vh;
   box-sizing: border-box;
 }
+=======
+/* .container {
+  height: 100vh;
+} */
+>>>>>>> lym
 
 /* 底部区域 */
 .footer {

@@ -82,9 +82,9 @@ export default {
 }
 
 /* 内容区域 */
-.container {
+/* .container {
   height: 100vh;
-}
+} */
 
 /* 底部区域 */
 .footer {

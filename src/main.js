@@ -8,6 +8,9 @@ import "./css/reset.css";
 
 Vue.config.productionTip = false;
 Vue.use(ElementUi);
+if(process.env.NODE_ENV==='development'){
+  require("./mock/mock.js")
+}
 new Vue({
   router,
   store,

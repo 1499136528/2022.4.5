@@ -62,7 +62,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style scoped>
     .top{
         display: flex;
         align-items: center;

@@ -9,7 +9,6 @@ const routes = [
     path: "/",
     name: "home",
     component: HomeView,
-<<<<<<< HEAD
     children: [
       {
         path: "/",
@@ -53,7 +52,6 @@ const routes = [
         component: () => import("../views/ticket/ticket.vue"),
       },
     ],
-=======
     children:[
       {path:"/",name:"homes",component:()=>import("../views/home/home.vue")},
       {path:"/singer",name:"singer",component:()=>import("../views/singer/singer.vue")},
@@ -107,7 +105,6 @@ const routes = [
       {path:"/album",name:"album",component:()=>import("../views/album/album.vue")},
       {path:"/ticket",name:"ticket",component:()=>import("../views/ticket/ticket.vue")},
     ]
->>>>>>> 846f4ae82e1f9e7822500e2077575bb82e1254f3
   },
 ];
 

@@ -1,8 +1,5 @@
 // 排行榜单
 <template>
-<<<<<<< HEAD
-  <div>排行榜单</div>
-=======
     <div class="all">
         <div class="list">
             <div class="list-first">
@@ -23,7 +20,6 @@
                 <router-view/>
         </div>
     </div>
->>>>>>> 846f4ae82e1f9e7822500e2077575bb82e1254f3
 </template>
 
 <script>
@@ -32,9 +28,6 @@ export default {
   methods: {},
 };
 </script>
-<<<<<<< HEAD
-<style scoped></style>
-=======
 <style scoped>
     .all{
         display: flex;
@@ -69,4 +62,3 @@ export default {
         background: #31c37c;
     }
 </style>
->>>>>>> 846f4ae82e1f9e7822500e2077575bb82e1254f3

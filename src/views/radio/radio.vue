@@ -105,7 +105,7 @@
     .category{
         position: sticky;
         height: 649px;
-        background: url('https://y.qq.com/mediastyle/yqq/img/radio_sidebar.png?max_age=2592000') no-repeat ;
+        background: url('https://y.qq.com/mediastyle/yqq/img/radio_sidebar.png?max_age=2592000') no-repeat;
         top:0;
     }
     .category .left{

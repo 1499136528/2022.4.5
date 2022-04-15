@@ -2,57 +2,20 @@
 <template>
     <div class="main">
         <div class="category">
-            <ul class="left">
-                <li>热门</li>
-                <li>心情</li>
-                <li>主题</li>
-                <li>场景</li>
-                <li>曲风</li>
-                <li>语言</li>
-                <li>人群</li>
-                <li>乐器</li>
-                <li>陪你听</li>
-                <li>厂牌</li>
+            <ul class="left" @click="getIndex">
+                <li v-for="(item,index) in res" :key="index" :path="index" :class="myindex==index?'active':''">{{item.type}}</li>
             </ul>
         </div>
         <div class="list">
-            <div class="hot_list">
-                <div class="title">热门</div>
+            <div v-for="(item,index) in res" :key="index" ref="List">
+                <div class="title">{{item.type}}</div>
                 <div class="item">
-                    <div class="radio">
+                    <div class="radio" v-for="(items,indexs) in item.data" :key="indexs">
                         <div class="zhezhao">
-                            <img src="https://y.qq.com/music/common/upload/t_music_radio/1261958.jpg?max_age=2592000" alt="" class="img">
-                            <div class="play"><img src="https://y.qq.com/mediastyle/yqq/img/cover_play.png?max_age=2592000" alt="" class="plays "></div>
+                            <img :src="items.imgurl" alt="" class="img">
+                            <div class="play"><img src="https://y.qq.com/mediastyle/yqq/img/cover_play.png?max_age=2592000" alt="" class="plays"></div>
                         </div>
-                        <div class="txt">个性电台</div>
-                    </div>
-                    <div class="radio">
-                        <div class="zhezhao">
-                            <img src="https://y.qq.com/music/common/upload/t_music_radio/1261958.jpg?max_age=2592000" alt="" class="img">
-                            <div class="play"><img src="https://y.qq.com/mediastyle/yqq/img/cover_play.png?max_age=2592000" alt="" class="plays "></div>
-                        </div>
-                        <div class="txt">个性电台</div>
-                    </div>
-                    <div class="radio">
-                        <div class="zhezhao">
-                            <img src="https://y.qq.com/music/common/upload/t_music_radio/1261958.jpg?max_age=2592000" alt="" class="img">
-                            <div class="play"><img src="https://y.qq.com/mediastyle/yqq/img/cover_play.png?max_age=2592000" alt="" class="plays "></div>
-                        </div>
-                        <div class="txt">个性电台</div>
-                    </div>
-                    <div class="radio">
-                        <div class="zhezhao">
-                            <img src="https://y.qq.com/music/common/upload/t_music_radio/1261958.jpg?max_age=2592000" alt="" class="img">
-                            <div class="play"><img src="https://y.qq.com/mediastyle/yqq/img/cover_play.png?max_age=2592000" alt="" class="plays "></div>
-                        </div>
-                        <div class="txt">个性电台</div>
-                    </div>
-                    <div class="radio">
-                        <div class="zhezhao">
-                            <img src="https://y.qq.com/music/common/upload/t_music_radio/1261958.jpg?max_age=2592000" alt="" class="img">
-                            <div class="play"><img src="https://y.qq.com/mediastyle/yqq/img/cover_play.png?max_age=2592000" alt="" class="plays "></div>
-                        </div>
-                        <div class="txt">个性电台</div>
+                        <div class="txt">{{items.txt}}</div>
                     </div>
                 </div>
             </div>
@@ -64,14 +27,71 @@
     import instance from '@/api/index'
     export default ({
         name: "radio",
+        data(){
+            return {
+                res:null,
+                myindex:0,
+                timer:null,
+                doc:null,
+                flag:true
+            }
+        },
         methods: {
             async getRadio(){
                 const {data}=await instance.get('/radio');
-                console.log('****',data)
+                this.res=data.data;
+            },
+            getIndex(res){
+                clearInterval(this.timer)
+                this.flag=false;
+                const index=res.target.attributes.path.nodeValue;
+                const oH=this.$refs.List[index].offsetTop;
+                const that=this;
+                this.timer=setInterval(function(){
+                    let sT=that.duc.scrollTop;
+                    const sd=(oH-that.duc.scrollTop)/6;
+                    
+                    const speed=sd>0?Math.ceil(sd):Math.floor(sd);
+                    
+                    that.duc.scrollTop=sT+speed;
+                    sT=that.duc.scrollTop;
+                    if(that.duc.scrollHeight-that.duc.clientHeight<=sT){
+                        clearInterval(that.timer);
+                        that.flag=true;
+                    }
+                    if(sT==oH){
+                        clearInterval(that.timer);
+                        that.flag=true;
+                    }
+                    
+                },10)
+                this.myindex=index
+
+            },
+            getScrollTop(){
+                if(this.flag){
+                    const oH=this.duc.scrollTop;
+                    const odiv=document.querySelectorAll('.list>div');
+                    odiv.forEach((item,index)=>{
+                        const top=item.offsetTop;
+                        const height=item.offsetHeight;
+                        if(oH>top -height/2&& oH<top+height/2){
+                            this.myindex=index;
+                        }
+                    })
+                }
+                
             }
         },
         created(){
             this.getRadio()
+        },
+        mounted(){
+            window.onscroll=this.getScrollTop;
+            this.duc=document.documentElement;
+        },
+        destroyed(){
+            window.onscroll=null;
         }
     })
 </script>
@@ -85,7 +105,7 @@
     .category{
         position: sticky;
         height: 649px;
-        background: url('https://y.qq.com/mediastyle/yqq/img/radio_sidebar.png?max_age=2592000') no-repeat ;
+        background: url('https://y.qq.com/mediastyle/yqq/img/radio_sidebar.png?max_age=2592000') no-repeat;
         top:0;
     }
     .category .left{
@@ -93,9 +113,13 @@
     }
     .category .left li{
         line-height:59px;
+        cursor: pointer;
+    }
+    .category .left .active{
+        color:#31c27c;
     }
     .list{
-        height: 800px;
+        
         padding:55px 0 0 0;
         margin-left:calc( 245px - 108px);   
         flex:1;
@@ -145,7 +169,7 @@
         height: 100%;
         top:0;
         left:0;
-        background: #000;
+        background: rgba(0,0,0,0.6);
         opacity: 0;
         display: flex;
         align-items:center;
@@ -156,9 +180,10 @@
         width: 40px;
         height: 40px;
         transition: all .3s;
+        cursor: pointer;
     }
     .item .radio .zhezhao:hover .play{
-        opacity: 0.5;
+        opacity: 1;
     }
     .item .radio .zhezhao:hover .img{
         transform: scale(1.1);

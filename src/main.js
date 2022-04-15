@@ -9,6 +9,11 @@ import "@/assets/icon/iconfont.css";
 
 Vue.config.productionTip = false;
 Vue.use(ElementUi);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> c31ad653a5dddc6efe6495f7a364ba856aea58d3
 if(process.env.NODE_ENV==='development'){
   require("./mock/mock.js")
 }

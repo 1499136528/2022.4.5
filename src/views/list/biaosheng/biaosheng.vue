@@ -138,3 +138,8 @@ export default {
   width: 9%;
 }
 </style>
+<<<<<<< HEAD
+=======
+    
+
+>>>>>>> c31ad653a5dddc6efe6495f7a364ba856aea58d3

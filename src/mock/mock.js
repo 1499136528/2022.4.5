@@ -10,5 +10,8 @@ require("./fenleigedan/mock")
 require('./album/mock')
 require('./mv/mock')
 require('./radio/mock')
+<<<<<<< HEAD
 require("./home/xg")
 require("./home/tj")
+=======
+>>>>>>> c31ad653a5dddc6efe6495f7a364ba856aea58d3

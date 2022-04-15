@@ -127,7 +127,7 @@ div h3 {
   width: 120%;
   height: 100%;
   position: absolute;
-  top: 20%;
+  top: 20%;  
   left: -10%;
   background: url("https://y.qq.com/ryqq/static/media/bg_detail.bb32b2d1.jpg?max_age=2592000");
   z-index: 0;

@@ -33,7 +33,7 @@
               :key="indexs"
             >
               <div v-for="(item, index) in items.array" :key="index">
-                <div class="imgbox">
+                <div class="imgbox" @click="plays(item)">
                   <el-image
                     style="width: 100%; height: 100%"
                     :src="item.image"
@@ -108,16 +108,33 @@
     <div class="home_3">
       <homeson1 v-bind:jctj="jctj"></homeson1>
     </div>
+    <div class="home_4">
+      <homeson2 @gettxt="gettxt" v-bind:xdsfdata="xdsfdata"></homeson2>
+    </div>
+    <div class="home_5">
+      <div class="block">
+        <h1>排 行 榜</h1>
+        <list></list>
+      </div>
+    </div>
+    <div class="home_6">
+      <homeson2 @gettxt="gettxt" v-bind:xdsfdata="xdsfdata"></homeson2>
+    </div>
   </div>
 </template>
 
 <script>
 import instance from "@/api/index";
-import homeson1 from '@/views/home/homeson1';
+import homeson1 from "@/views/home/homeson1";
+import homeson2 from "@/views/home/homeson2.vue";
+import list from "@/views/home/list.vue";
+
 export default {
   name: "home",
-  components:{
-    homeson1
+  components: {
+    homeson1,
+    homeson2,
+    list,
   },
   data() {
     return {
@@ -142,9 +159,33 @@ export default {
       xgsfDate: null,
       myindex1: 0,
       jctj: null,
+      xdsf: null,
+      xdsfdata: null,
     };
   },
+  watch: {
+    xdsf() {
+      this.getxdsf(this.xdsf);
+    },
+  },
   methods: {
+    plays(item) {
+      let data = JSON.stringify(item);
+      this.$router.push({
+        path:"/plays",
+        query:{
+          items:encodeURIComponent(data)
+        }
+      });
+    },
+    gettxt(txt) {
+      this.xdsf = txt;
+    },
+    async getxdsf(res) {
+      let dat = res || "内地";
+      let { data } = await instance.get("/xdsf", { data: dat });
+      this.xdsfdata = this.zldata(data, 10);
+    },
     getindex(index) {
       this.myindex = index;
     },
@@ -195,21 +236,24 @@ export default {
           brr = [];
         }
       }
-      if(brr.length==0){ return arr;}
+      if (brr.length == 0) {
+        return arr;
+      }
       arr.push({ a: "1", array: brr });
       return arr;
     },
-    async gettjsp(){
-      let {data} = await instance.get("/tj")
-      let datas = this.zldata(data,2);
+    async gettjsp() {
+      let { data } = await instance.get("/tj");
+      let datas = this.zldata(data, 2);
       this.jctj = datas;
-    }
+    },
   },
   created() {
     this.getGdtj();
     this.getxgsf();
     this.gettjsp();
-  }
+    this.getxdsf();
+  },
 };
 </script>
 <style scoped>
@@ -233,7 +277,10 @@ h1 {
   text-align: center;
 }
 .home_1,
-.home_2 {
+.home_2,
+.home_4,
+.home_5,
+.home_6 {
   width: 100%;
   position: relative;
 }
@@ -245,7 +292,7 @@ h1 {
 }
 .block ul li {
   cursor: pointer;
-  margin: 0 30px;
+  padding: 0 30px;
 }
 .swiper {
   position: relative;
@@ -394,14 +441,14 @@ h1 {
   background: url("https://y.qq.com/ryqq/static/media/bg_detail.bb32b2d1.jpg?max_age=2592000");
   z-index: 0;
 }
-.shu{
+.shu {
   display: flex;
   flex-direction: column;
   padding-left: 10px;
   padding-top: 20px;
 }
 
-.home_3{
+.home_3 {
   width: 100%;
 }
 </style>
@@ -409,7 +456,7 @@ h1 {
 .el-carousel__indicators--outside button {
   background-color: #31c27c;
 }
-.el-carousel__indicators--outside{
+.el-carousel__indicators--outside {
   width: 100%;
   position: absolute;
   left: 0;

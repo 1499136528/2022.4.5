@@ -137,8 +137,4 @@ export default {
 .shangsheng {
   width: 9%;
 }
-<<<<<<< HEAD
 </style>
-=======
-</style>
->>>>>>> c31ad653a5dddc6efe6495f7a364ba856aea58d3

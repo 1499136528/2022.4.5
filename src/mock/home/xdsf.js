@@ -1,0 +1,475 @@
+let Mock = require("mockjs");
+let data = {
+    "tit":["内地","港台","欧美","韩国","日本","其他"],
+    "内地":[
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000RiIWR021668.jpg?max_age=2592000",
+            "title":"当天空下起雨",
+            "name":"开火车的小王子"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000004dATxa2gyT1k.jpg?max_age=2592000",
+            "title":"少年与梦",
+            "name":"皮卡丘多多"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000RiIWR021668.jpg?max_age=2592000",
+            "title":"当天空下起雨",
+            "name":"开火车的小王子"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000004dATxa2gyT1k.jpg?max_age=2592000",
+            "title":"少年与梦",
+            "name":"皮卡丘多多"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000RiIWR021668.jpg?max_age=2592000",
+            "title":"当天空下起雨",
+            "name":"开火车的小王子"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000004dATxa2gyT1k.jpg?max_age=2592000",
+            "title":"少年与梦",
+            "name":"皮卡丘多多"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000RiIWR021668.jpg?max_age=2592000",
+            "title":"当天空下起雨",
+            "name":"开火车的小王子"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000004dATxa2gyT1k.jpg?max_age=2592000",
+            "title":"少年与梦",
+            "name":"皮卡丘多多"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000RiIWR021668.jpg?max_age=2592000",
+            "title":"当天空下起雨",
+            "name":"开火车的小王子"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000004dATxa2gyT1k.jpg?max_age=2592000",
+            "title":"少年与梦",
+            "name":"皮卡丘多多"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000RiIWR021668.jpg?max_age=2592000",
+            "title":"当天空下起雨",
+            "name":"开火车的小王子"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000004dATxa2gyT1k.jpg?max_age=2592000",
+            "title":"少年与梦",
+            "name":"皮卡丘多多"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000RiIWR021668.jpg?max_age=2592000",
+            "title":"当天空下起雨",
+            "name":"开火车的小王子"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000004dATxa2gyT1k.jpg?max_age=2592000",
+            "title":"少年与梦",
+            "name":"皮卡丘多多"
+        },
+    ],
+    "港台":[
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000Rt32a06QR02.jpg?max_age=2592000",
+            "title":"谢谢妳说的谢谢你",
+            "name":"羊心"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003hn1r119GGIJ.jpg?max_age=2592000",
+            "title":"他说",
+            "name":"陈珊妮"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000Rt32a06QR02.jpg?max_age=2592000",
+            "title":"谢谢妳说的谢谢你",
+            "name":"羊心"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003hn1r119GGIJ.jpg?max_age=2592000",
+            "title":"他说",
+            "name":"陈珊妮"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000Rt32a06QR02.jpg?max_age=2592000",
+            "title":"谢谢妳说的谢谢你",
+            "name":"羊心"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003hn1r119GGIJ.jpg?max_age=2592000",
+            "title":"他说",
+            "name":"陈珊妮"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000Rt32a06QR02.jpg?max_age=2592000",
+            "title":"谢谢妳说的谢谢你",
+            "name":"羊心"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003hn1r119GGIJ.jpg?max_age=2592000",
+            "title":"他说",
+            "name":"陈珊妮"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000Rt32a06QR02.jpg?max_age=2592000",
+            "title":"谢谢妳说的谢谢你",
+            "name":"羊心"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003hn1r119GGIJ.jpg?max_age=2592000",
+            "title":"他说",
+            "name":"陈珊妮"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000Rt32a06QR02.jpg?max_age=2592000",
+            "title":"谢谢妳说的谢谢你",
+            "name":"羊心"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003hn1r119GGIJ.jpg?max_age=2592000",
+            "title":"他说",
+            "name":"陈珊妮"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000Rt32a06QR02.jpg?max_age=2592000",
+            "title":"谢谢妳说的谢谢你",
+            "name":"羊心"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003hn1r119GGIJ.jpg?max_age=2592000",
+            "title":"他说",
+            "name":"陈珊妮"
+        },
+    ],
+    "欧美":[
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000001TENAt1hTHeZ.jpg?max_age=2592000",
+            "title":"Adamas",
+            "name":"Shari"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M0000017RG6E4TG2rR.jpg?max_age=2592000",
+            "title":"If That's What You Need",
+            "name":"ayokay"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000001TENAt1hTHeZ.jpg?max_age=2592000",
+            "title":"Adamas",
+            "name":"Shari"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M0000017RG6E4TG2rR.jpg?max_age=2592000",
+            "title":"If That's What You Need",
+            "name":"ayokay"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000001TENAt1hTHeZ.jpg?max_age=2592000",
+            "title":"Adamas",
+            "name":"Shari"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M0000017RG6E4TG2rR.jpg?max_age=2592000",
+            "title":"If That's What You Need",
+            "name":"ayokay"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000001TENAt1hTHeZ.jpg?max_age=2592000",
+            "title":"Adamas",
+            "name":"Shari"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M0000017RG6E4TG2rR.jpg?max_age=2592000",
+            "title":"If That's What You Need",
+            "name":"ayokay"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000001TENAt1hTHeZ.jpg?max_age=2592000",
+            "title":"Adamas",
+            "name":"Shari"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M0000017RG6E4TG2rR.jpg?max_age=2592000",
+            "title":"If That's What You Need",
+            "name":"ayokay"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000001TENAt1hTHeZ.jpg?max_age=2592000",
+            "title":"Adamas",
+            "name":"Shari"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M0000017RG6E4TG2rR.jpg?max_age=2592000",
+            "title":"If That's What You Need",
+            "name":"ayokay"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000001TENAt1hTHeZ.jpg?max_age=2592000",
+            "title":"Adamas",
+            "name":"Shari"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M0000017RG6E4TG2rR.jpg?max_age=2592000",
+            "title":"If That's What You Need",
+            "name":"ayokay"
+        },
+    ],
+    "韩国":[
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003J9J8f3SjVFt.jpg?max_age=2592000",
+            "title":"사랑하게 될 줄 알았어 (2022) (I Knew I Love (2022))",
+            "name":"홍의진"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003wKbwL4QVGWv.jpg?max_age=2592000",
+            "title":"넌 나 어때 (re;code Episode Ⅹ) (How About Me)",
+            "name":"林韩星 / 朴佑镇"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003J9J8f3SjVFt.jpg?max_age=2592000",
+            "title":"사랑하게 될 줄 알았어 (2022) (I Knew I Love (2022))",
+            "name":"홍의진"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003wKbwL4QVGWv.jpg?max_age=2592000",
+            "title":"넌 나 어때 (re;code Episode Ⅹ) (How About Me)",
+            "name":"林韩星 / 朴佑镇"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003J9J8f3SjVFt.jpg?max_age=2592000",
+            "title":"사랑하게 될 줄 알았어 (2022) (I Knew I Love (2022))",
+            "name":"홍의진"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003wKbwL4QVGWv.jpg?max_age=2592000",
+            "title":"넌 나 어때 (re;code Episode Ⅹ) (How About Me)",
+            "name":"林韩星 / 朴佑镇"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003J9J8f3SjVFt.jpg?max_age=2592000",
+            "title":"사랑하게 될 줄 알았어 (2022) (I Knew I Love (2022))",
+            "name":"홍의진"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003wKbwL4QVGWv.jpg?max_age=2592000",
+            "title":"넌 나 어때 (re;code Episode Ⅹ) (How About Me)",
+            "name":"林韩星 / 朴佑镇"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003J9J8f3SjVFt.jpg?max_age=2592000",
+            "title":"사랑하게 될 줄 알았어 (2022) (I Knew I Love (2022))",
+            "name":"홍의진"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003wKbwL4QVGWv.jpg?max_age=2592000",
+            "title":"넌 나 어때 (re;code Episode Ⅹ) (How About Me)",
+            "name":"林韩星 / 朴佑镇"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003J9J8f3SjVFt.jpg?max_age=2592000",
+            "title":"사랑하게 될 줄 알았어 (2022) (I Knew I Love (2022))",
+            "name":"홍의진"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003wKbwL4QVGWv.jpg?max_age=2592000",
+            "title":"넌 나 어때 (re;code Episode Ⅹ) (How About Me)",
+            "name":"林韩星 / 朴佑镇"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003J9J8f3SjVFt.jpg?max_age=2592000",
+            "title":"사랑하게 될 줄 알았어 (2022) (I Knew I Love (2022))",
+            "name":"홍의진"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003wKbwL4QVGWv.jpg?max_age=2592000",
+            "title":"넌 나 어때 (re;code Episode Ⅹ) (How About Me)",
+            "name":"林韩星 / 朴佑镇"
+        },
+    ],
+    "日本":[
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000KnnO20v5I2P.jpg?max_age=2592000",
+            "title":"黄色と青を身にまとって",
+            "name":"初音未来"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003tCUvK0wu9Og.jpg?max_age=2592000",
+            "title":"あの日、あの場所/眩光",
+            "name":"WANIMA"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000KnnO20v5I2P.jpg?max_age=2592000",
+            "title":"黄色と青を身にまとって",
+            "name":"初音未来"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003tCUvK0wu9Og.jpg?max_age=2592000",
+            "title":"あの日、あの場所/眩光",
+            "name":"WANIMA"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000KnnO20v5I2P.jpg?max_age=2592000",
+            "title":"黄色と青を身にまとって",
+            "name":"初音未来"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003tCUvK0wu9Og.jpg?max_age=2592000",
+            "title":"あの日、あの場所/眩光",
+            "name":"WANIMA"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000KnnO20v5I2P.jpg?max_age=2592000",
+            "title":"黄色と青を身にまとって",
+            "name":"初音未来"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003tCUvK0wu9Og.jpg?max_age=2592000",
+            "title":"あの日、あの場所/眩光",
+            "name":"WANIMA"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000KnnO20v5I2P.jpg?max_age=2592000",
+            "title":"黄色と青を身にまとって",
+            "name":"初音未来"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003tCUvK0wu9Og.jpg?max_age=2592000",
+            "title":"あの日、あの場所/眩光",
+            "name":"WANIMA"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000KnnO20v5I2P.jpg?max_age=2592000",
+            "title":"黄色と青を身にまとって",
+            "name":"初音未来"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003tCUvK0wu9Og.jpg?max_age=2592000",
+            "title":"あの日、あの場所/眩光",
+            "name":"WANIMA"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000KnnO20v5I2P.jpg?max_age=2592000",
+            "title":"黄色と青を身にまとって",
+            "name":"初音未来"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003tCUvK0wu9Og.jpg?max_age=2592000",
+            "title":"あの日、あの場所/眩光",
+            "name":"WANIMA"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000KnnO20v5I2P.jpg?max_age=2592000",
+            "title":"黄色と青を身にまとって",
+            "name":"初音未来"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000003tCUvK0wu9Og.jpg?max_age=2592000",
+            "title":"あの日、あの場所/眩光",
+            "name":"WANIMA"
+        },
+    ],
+    "其他":[
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000ZzwQz44ZUBQ.jpg?max_age=2592000",
+            "title":"借来的拥抱",
+            "name":"黄宇哲"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000004MotKa31pwm3.jpg?max_age=2592000",
+            "title":"Moonlight Shadow",
+            "name":"ChilledLab"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000ZzwQz44ZUBQ.jpg?max_age=2592000",
+            "title":"借来的拥抱",
+            "name":"黄宇哲"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000004MotKa31pwm3.jpg?max_age=2592000",
+            "title":"Moonlight Shadow",
+            "name":"ChilledLab"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000ZzwQz44ZUBQ.jpg?max_age=2592000",
+            "title":"借来的拥抱",
+            "name":"黄宇哲"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000004MotKa31pwm3.jpg?max_age=2592000",
+            "title":"Moonlight Shadow",
+            "name":"ChilledLab"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000ZzwQz44ZUBQ.jpg?max_age=2592000",
+            "title":"借来的拥抱",
+            "name":"黄宇哲"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000004MotKa31pwm3.jpg?max_age=2592000",
+            "title":"Moonlight Shadow",
+            "name":"ChilledLab"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000ZzwQz44ZUBQ.jpg?max_age=2592000",
+            "title":"借来的拥抱",
+            "name":"黄宇哲"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000004MotKa31pwm3.jpg?max_age=2592000",
+            "title":"Moonlight Shadow",
+            "name":"ChilledLab"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000ZzwQz44ZUBQ.jpg?max_age=2592000",
+            "title":"借来的拥抱",
+            "name":"黄宇哲"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000004MotKa31pwm3.jpg?max_age=2592000",
+            "title":"Moonlight Shadow",
+            "name":"ChilledLab"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000ZzwQz44ZUBQ.jpg?max_age=2592000",
+            "title":"借来的拥抱",
+            "name":"黄宇哲"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000004MotKa31pwm3.jpg?max_age=2592000",
+            "title":"Moonlight Shadow",
+            "name":"ChilledLab"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000ZzwQz44ZUBQ.jpg?max_age=2592000",
+            "title":"借来的拥抱",
+            "name":"黄宇哲"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000004MotKa31pwm3.jpg?max_age=2592000",
+            "title":"Moonlight Shadow",
+            "name":"ChilledLab"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000000ZzwQz44ZUBQ.jpg?max_age=2592000",
+            "title":"借来的拥抱",
+            "name":"黄宇哲"
+        },
+        {
+            "image":"https://y.qq.com/music/photo_new/T002R300x300M000004MotKa31pwm3.jpg?max_age=2592000",
+            "title":"Moonlight Shadow",
+            "name":"ChilledLab"
+        },
+    ],
+}
+
+Mock.mock("/api/xdsf","get",function(config){
+    let txt = config.body;
+    console.log(txt);
+    if(!txt){
+        return data.tit;
+    }
+    return data[txt.trim()];
+})

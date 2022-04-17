@@ -233,8 +233,7 @@ export default {
     createFilter(queryString) {
       return (restaurant) => {
         return (
-          restaurant.value.toLowerCase().indexOf(queryString.toLowerCase()) ===
-          0
+          restaurant.value.toLowerCase().indexOf(queryString.toLowerCase())
         );
       };
     },

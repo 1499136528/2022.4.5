@@ -411,6 +411,6 @@ let gdtj = {
 };
 Mock.mock("/api/getgd", "get", function (config) {
   let txt = config.body.trim();
-  console.log(txt);
+  // console.log(txt);
   return gdtj[txt];
 });

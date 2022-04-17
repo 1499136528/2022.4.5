@@ -11,6 +11,6 @@ let data = [
 ]
 
 Mock.mock("/api/tj","get",function(config){
-    console.log(config);
+    // console.log(config);
     return data;
 });
